@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>rua</title>
+    <style>
+        * {
+            padding: 0;
+margin: 0;
+        }
+
+        .wrapper {
+            height: 600px;
+            width: 400px;
+            border: 1px solid red;
+            position: relative;
+        }
+
+        .picture {
+            border:1px solid gray;
+            height: 360px;
+            width: 360px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .content {
+            font-size: 20px;
+            word-break: break-all;
+            margin: 20px 20px 0;
+        }
+
+        .price {
+
+            margin: 10px
+        }
+
+        .stock {
+            margin: 0 20px;
+            width: 360px;
+            height: 1em;
+            position: relative;
+            font-size: 16px;
+            text-align: center;
+
+        }
+
+        .bar {
+            height: 12px;
+            width: 180px;
+            border: 3px solid red;
+            border-radius: 20px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: red;
+
+        }
+
+        .bar::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 130px;
+            bottom: 0;
+            right: 0;
+            background: #fff;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .left {
+            position: absolute;
+            left: 0;
+            transform: translate(0%, -50%);
+            top: 50%;
+
+        }
+
+        .right {
+            position: absolute;
+            right: 0;
+            transform: translate(0%, -50%);
+            top: 50%;
+
+        }
+
+        .button {
+            height: 60px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            background: red;
+        }
+
+        .content2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            font-size: 30px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="picture">
+        我是图
+    </div>
+    <div class="content">巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉</div>
+    <div class="price">
+        <span style="font-size: 30px;color: red;margin: 0">￥XXXX</span><span style="font-size: 20px;color: gray"><s>￥XXXX</s></span>
+    </div>
+    <div class="stock">
+        <div class="left">已售75%</div>
+        <div class="bar"></div>
+        <div class="right">剩余 <span style="font-size: 16px;color: red">xx</span> 件</div>
+    </div>
+    <div class="button">
+        <div class="content2">立即购买</div>
+    </div>
+</div>
+</body>
+</html>
